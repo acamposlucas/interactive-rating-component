@@ -4,14 +4,14 @@ import { useState } from "react";
 
 interface CardProps {
   handleRatingsOnSubmit: () => void;
+  handleSelectedInput: (e: any) => void;
 }
 
-export function Card({ handleRatingsOnSubmit }: CardProps) {
-  const [ratingValue, setRatingValue] = useState(String);
-  const handleRatingValue = (e: any) => {
-    console.log(e.currentTarget.value);
-    setRatingValue(e.currentTarget.value);
-  };
+export function Card({
+  handleRatingsOnSubmit,
+  handleSelectedInput,
+}: CardProps) {
+  const [selectedInput, setSelectedInput] = useState(String);
 
   return (
     <Container>
@@ -27,8 +27,8 @@ export function Card({ handleRatingsOnSubmit }: CardProps) {
             <label htmlFor="rating-1">
               1
               <input
-                checked={ratingValue === "1"}
-                onChange={handleRatingValue}
+                checked={selectedInput === "1"}
+                onChange={handleSelectedInput}
                 type="radio"
                 name="ratings"
                 id="rating-1"
@@ -40,8 +40,8 @@ export function Card({ handleRatingsOnSubmit }: CardProps) {
             <label htmlFor="rating-2">
               2
               <input
-                checked={ratingValue === "2"}
-                onChange={handleRatingValue}
+                checked={selectedInput === "2"}
+                onChange={handleSelectedInput}
                 type="radio"
                 name="ratings"
                 id="rating-2"
@@ -53,8 +53,8 @@ export function Card({ handleRatingsOnSubmit }: CardProps) {
             <label htmlFor="rating-3">
               3
               <input
-                checked={ratingValue === "3"}
-                onChange={handleRatingValue}
+                checked={selectedInput === "3"}
+                onChange={handleSelectedInput}
                 type="radio"
                 name="ratings"
                 id="rating-3"
@@ -66,8 +66,8 @@ export function Card({ handleRatingsOnSubmit }: CardProps) {
             <label htmlFor="rating-4">
               4
               <input
-                checked={ratingValue === "4"}
-                onChange={handleRatingValue}
+                checked={selectedInput === "4"}
+                onChange={handleSelectedInput}
                 type="radio"
                 name="ratings"
                 id="rating-4"
@@ -79,8 +79,8 @@ export function Card({ handleRatingsOnSubmit }: CardProps) {
             <label htmlFor="rating-5">
               5
               <input
-                checked={ratingValue === "5"}
-                onChange={handleRatingValue}
+                checked={selectedInput === "5"}
+                onChange={handleSelectedInput}
                 type="radio"
                 name="ratings"
                 id="rating-5"

@@ -1,13 +1,17 @@
 import { Container } from "./style";
 import thankYouImg from "../../assets/illustration-thank-you.svg";
 
-export function ThankYouCard() {
+interface ThankYouCardProps {
+  selectedInput: string;
+}
+
+export function ThankYouCard({ selectedInput }: ThankYouCardProps) {
   return (
     <Container>
       <img src={thankYouImg} alt="Thank you" />
       <div className="rating-output">
         <p>
-          You selected <span>4</span> out of 5
+          You selected <span>{selectedInput}</span> out of 5
         </p>
       </div>
       <h1>Thank you!</h1>

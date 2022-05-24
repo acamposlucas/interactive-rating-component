@@ -5,6 +5,11 @@ import { useState } from "react";
 
 function App() {
   const [ratings, setRatings] = useState(false);
+  const [selectedInput, setSelectedInput] = useState(String);
+
+  function handleSelectedInput(e: any) {
+    setSelectedInput(e.currentTarget.value);
+  }
 
   function handleRatingsOnSubmit() {
     setRatings(true);
@@ -14,9 +19,12 @@ function App() {
     <>
       <GlobalStyle />
       {ratings ? (
-        <ThankYouCard />
+        <ThankYouCard selectedInput={selectedInput} />
       ) : (
-        <Card handleRatingsOnSubmit={handleRatingsOnSubmit} />
+        <Card
+          handleRatingsOnSubmit={handleRatingsOnSubmit}
+          handleSelectedInput={handleSelectedInput}
+        />
       )}
     </>
   );
