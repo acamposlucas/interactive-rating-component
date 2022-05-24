@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: var(--darkBlue);
   border-radius: 1.5rem;
-  padding: 32px 24px 46px 24px;
+  padding: 34px 24px 46px 24px;
   text-align: center;
+  height: 100%;
+  max-height: 400px;
+  max-width: 414px;
 
   img {
+    height: 100px;
     margin-bottom: 1.5rem;
   }
 
@@ -25,7 +29,7 @@ export const Container = styled.div`
   h1 {
     font-size: 2rem;
     color: var(--white);
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.5rem;
   }
 
   p {

@@ -3,6 +3,9 @@ export const Container = styled.div`
   background-color: var(--darkBlue);
   border-radius: 1.5rem;
   padding: 24px 24px 32px 24px;
+  height: 100%;
+  width: 100%;
+  max-width: 414px;
 
   img {
     padding: 1rem;
@@ -37,8 +40,8 @@ export const Container = styled.div`
       border: none;
 
       div {
-        height: 42px;
-        width: 42px;
+        height: 48px;
+        width: 48px;
 
         label {
           height: inherit;
